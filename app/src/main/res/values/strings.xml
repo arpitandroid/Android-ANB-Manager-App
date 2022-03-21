@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Atma Nirbhar OPS</string>
+    <string name="email_or_phone">Email</string>
+    <string name="password">Password</string>
+    <string name="SignIn">Sign In</string>
+    <string name="no_internet_connect">No Internet Connection found!</string>
+    <string name="email_field_empty">Registered Email Required</string>
+    <string name="invalid_field_empty">Invalid Mobile Number</string>
+    <string name="password_field_empty">Password Field Empty</string>
+</resources>
