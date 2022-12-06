@@ -2,6 +2,7 @@ package aatmanirbharbharat.app.atmanirbharops.ui
 
 import aatmanirbharbharat.app.atmanirbharops.databinding.ActivityMainBinding
 import aatmanirbharbharat.app.atmanirbharops.util.Constant
+import aatmanirbharbharat.app.atmanirbharops.util.Constant.Companion.BASE_URL
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -37,7 +38,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadUrl(){
-        binding.webView.loadUrl("https://assleit.com/atmanirbar_bharat/manager/home?token=$token")
+      //  binding.webView.loadUrl("https://assleit.com/atmanirbar_bharat/manager/home?token=$token")
+        binding.webView.loadUrl(BASE_URL+"manager/home?token=$token")
     }
 
     inner class WebViewClient : android.webkit.WebViewClient() {
@@ -68,9 +70,11 @@ class MainActivity : AppCompatActivity() {
             super.onPageFinished(view, url)
             binding.progressBar5.visibility = View.GONE
 
-            if (url.contains("https://assleit.com/atmanirbar_bharat/manager/home/logout")){
+           // if (url.contains("https://assleit.com/atmanirbar_bharat/manager/home/logout")){
+            if (url.contains(BASE_URL+"manager/home/logout")){
                 showAlertDialog()
-            }else if(url.contains("https://assleit.com/atmanirbar_bharat/manager/login")){
+         //   }else if(url.contains("https://assleit.com/atmanirbar_bharat/manager/login")){
+            }else if(url.contains(BASE_URL+"manager/login")){
                 Toast.makeText(this@MainActivity, "Login Expired Please Login Again", Toast.LENGTH_LONG).show()
                 onCleard()
             }
