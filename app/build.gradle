@@ -16,7 +16,16 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    signingConfigs {
+        release {
+            storeFile file('/app/anbmanager.jks')
+            storePassword 'anb@1234'
+            keyAlias 'key0'
+            keyPassword 'anb@1234'
+           // v1SigningEnabled true
+          //  v2SigningEnabled true
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
